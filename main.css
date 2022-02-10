@@ -1,0 +1,159 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --primary: #c33124;
+  --secondary: #a1dffb;
+  --tertiary: #f98365;
+  --partial: #e8a628;
+  --link: #f9de59;
+}
+
+body {
+  background: linear-gradient(
+      rgba(249, 131, 101, 0.58),
+      rgba(161, 222, 251, 0.678)
+    ),
+    url(/img/Main-bg.jpg);
+  font-size: 18px;
+  font-family: "Redressed", cursive;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hval {
+  color: var(--secondary);
+  background-color: var(--tertiary);
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px rgb(53, 53, 53);
+  font-size: 1.3rem;
+  margin-top: 1.2rem;
+}
+.container {
+  padding: 2em;
+  width: 80%;
+}
+.art-cover {
+  width: 100%;
+  border-radius: 1em 1em 0 0;
+}
+
+p {
+  color: rgb(83, 78, 78);
+}
+
+.em_text {
+  font-size: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.card {
+  border-radius: 1em;
+  overflow: hidden;
+  padding: 0.5em;
+  background: linear-gradient(rgb(249, 131, 101), rgb(161, 223, 251));
+  box-shadow: 0px 0.5em 0.5em rgb(94, 92, 92);
+}
+.card:hover img {
+  transform: translate(2px, 5px);
+  transition: linear 1s;
+}
+.card h2 {
+  text-align: center;
+  font-family: "Fredoka One", cursive;
+  font-size: 1.2em;
+}
+/* H2 link */
+.card h2 a {
+  text-decoration: none;
+  color: var(--primary);
+}
+.card h2 a:hover {
+  text-decoration: underline;
+  color: var(--partial);
+}
+/* end of H2 link */
+.card p {
+  padding: 1em;
+  text-align: center;
+  font-size: 0.9em;
+  font-family: "Indie Flower", cursive;
+  /* font-family: "Redressed", cursive; */
+}
+
+.details {
+  display: flex;
+  justify-content: space-around;
+}
+/* ARTICLE */
+.art_container {
+  width: 80%;
+}
+.art-cover-1 {
+  width: 100%;
+}
+.card p {
+  font-family: "Indie Flower", cursive;
+}
+.bubble {
+  display: flex;
+  flex-direction: column;
+}
+.self {
+  align-self: flex-end;
+  justify-self: center;
+  background-color: #e8a628;
+  color: whitesmoke;
+  border-radius: 50%;
+  padding: 0.2rem;
+  /* margin-left: 0.2rem; */
+}
+.the_voice {
+  align-self: flex-start;
+  justify-self: left;
+  background-color: #f98365;
+  color: whitesmoke;
+  border-radius: 50%;
+  padding: 0.2rem;
+  /* margin-left: 0.2rem; */
+}
+
+.chat_bubble {
+  margin: 0.5em 0 0.5em 0;
+  max-width: 60vh;
+  padding: 0.5rem;
+  box-shadow: 0rem 0.5rem 0.5rem grey;
+}
+.article .voice {
+  background: linear-gradient(
+    to right,
+    rgba(249, 131, 101, 0.5),
+    rgba(161, 223, 251, 0.5)
+  );
+  border-radius: 1rem 1rem 1rem 0;
+  display: flex;
+  justify-content: right;
+}
+.article .me {
+  background: linear-gradient(
+    to right,
+    rgba(249, 222, 89, 0.5),
+    rgb(232, 166, 40, 0.5)
+  );
+  border-radius: 1rem 1rem 0 1rem;
+  display: flex;
+  justify-content: left;
+
+  /* background-color: #a1dffb; */
+}
