@@ -15,18 +15,28 @@
 
 body {
   background: linear-gradient(
-      rgba(249, 131, 101, 0.58),
+      rgba(249, 131, 101, 0.486),
       rgba(161, 222, 251, 0.678)
     ),
     url(/img/Main-bg.jpg);
-  font-size: 18px;
+  font-size: 17px;
   font-family: "Redressed", cursive;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+  background-attachment: fixed;
+
+  /* background-repeat: no-repeat; */
+}
+::selection {
+  background-color: #e8a628;
+  color: black;
 }
 
+h1 {
+  font-size: 1.7rem;
+}
+h2 {
+  font-size: 1.4rem;
+}
 .hval {
   color: var(--secondary);
   background-color: var(--tertiary);
@@ -35,10 +45,17 @@ body {
   box-shadow: 3px 3px 5px rgb(53, 53, 53);
   font-size: 1.3rem;
   margin-top: 1.2rem;
+  font-family: "Fredoka One", cursive;
 }
 .container {
   padding: 2em;
   width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /* align-items: center; */
+  margin: auto;
 }
 .art-cover {
   width: 100%;
@@ -98,7 +115,24 @@ p {
 }
 /* ARTICLE */
 .art_container {
-  width: 80%;
+  width: 90%;
+  margin: auto;
+}
+.heading {
+  background-image: linear-gradient(to left, var(--secondary), white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+  text-transform: capitalize;
+  text-align: center;
+  padding: 1rem 0 1rem 0;
+  font-family: "Fredoka One", cursive;
+}
+.chat {
+  display: flex;
+  flex-direction: column;
+  font-family: "Indie Flower", cursive;
+  font-family: "Redressed", cursive;
 }
 .art-cover-1 {
   width: 100%;
@@ -106,10 +140,7 @@ p {
 .card p {
   font-family: "Indie Flower", cursive;
 }
-.bubble {
-  display: flex;
-  flex-direction: column;
-}
+
 .self {
   align-self: flex-end;
   justify-self: center;
@@ -117,8 +148,8 @@ p {
   color: whitesmoke;
   border-radius: 50%;
   padding: 0.2rem;
-  /* margin-left: 0.2rem; */
 }
+
 .the_voice {
   align-self: flex-start;
   justify-self: left;
@@ -126,34 +157,38 @@ p {
   color: whitesmoke;
   border-radius: 50%;
   padding: 0.2rem;
-  /* margin-left: 0.2rem; */
 }
 
 .chat_bubble {
-  margin: 0.5em 0 0.5em 0;
-  max-width: 60vh;
+  margin: 0.3em 0 0.3em 0;
   padding: 0.5rem;
-  box-shadow: 0rem 0.5rem 0.5rem grey;
+  max-width: 85%;
+  box-shadow: 0rem 2px 5px rgba(0, 0, 0, 0.2);
 }
-.article .voice {
+.voice {
   background: linear-gradient(
     to right,
     rgba(249, 131, 101, 0.5),
-    rgba(161, 223, 251, 0.5)
+    rgba(255, 255, 255, 0.5)
   );
   border-radius: 1rem 1rem 1rem 0;
-  display: flex;
-  justify-content: right;
+  align-self: flex-start;
 }
-.article .me {
+.me {
   background: linear-gradient(
     to right,
     rgba(249, 222, 89, 0.5),
     rgb(232, 166, 40, 0.5)
   );
   border-radius: 1rem 1rem 0 1rem;
-  display: flex;
-  justify-content: left;
+  align-self: flex-end;
+  color: white;
+}
 
-  /* background-color: #a1dffb; */
+/* FOOTER */
+.footer_1 {
+  padding: 2em 0;
+  text-align: center;
+  font-family: "Fredoka One", cursive;
+  font-size: 10px;
 }
