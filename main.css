@@ -19,16 +19,17 @@ body {
       rgba(161, 222, 251, 0.678)
     ),
     url(/img/Main-bg.jpg);
-  font-size: 17px;
+  font-size: 15px;
   font-family: "Redressed", cursive;
 
   background-attachment: fixed;
-
+  scroll-behavior: smooth;
   /* background-repeat: no-repeat; */
 }
 ::selection {
   background-color: #e8a628;
   color: black;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -37,19 +38,46 @@ h1 {
 h2 {
   font-size: 1.4rem;
 }
+
 .hval {
   color: var(--secondary);
   background-color: var(--tertiary);
-  padding: 5px;
+  padding: 0.7rem;
   border-radius: 5px;
-  box-shadow: 3px 3px 5px rgb(53, 53, 53);
+  box-shadow: 0 0 10px rgb(53, 53, 53);
   font-size: 1.3rem;
   margin-top: 1.2rem;
   font-family: "Fredoka One", cursive;
 }
+.hval,
+.heading {
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #e8a628 0%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+}
+
+@keyframes textclip {
+  from {
+    background-position: 200% center;
+  }
+}
 .container {
   padding: 2em;
-  width: 80%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -72,7 +100,7 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 1em;
+  margin: 1em 0;
 }
 
 .card {
@@ -81,15 +109,18 @@ p {
   padding: 0.5em;
   background: linear-gradient(rgb(249, 131, 101), rgb(161, 223, 251));
   box-shadow: 0px 0.5em 0.5em rgb(94, 92, 92);
+  filter: drop-shadow(0 0 0.65rem var(--secondary));
+  min-height: 50vh;
 }
 .card:hover img {
-  transform: translate(2px, 5px);
-  transition: linear 1s;
+  transform: scale(0.9);
+  transition: linear 0.5s;
 }
 .card h2 {
   text-align: center;
   font-family: "Fredoka One", cursive;
   font-size: 1.2em;
+  padding: 1rem 0;
 }
 /* H2 link */
 .card h2 a {
@@ -99,6 +130,7 @@ p {
 .card h2 a:hover {
   text-decoration: underline;
   color: var(--partial);
+  transition: linear 0.5s;
 }
 /* end of H2 link */
 .card p {
@@ -119,44 +151,40 @@ p {
   margin: auto;
 }
 .heading {
-  background-image: linear-gradient(to left, var(--secondary), white);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-decoration: none;
-  text-transform: capitalize;
-  text-align: center;
   padding: 1rem 0 1rem 0;
   font-family: "Fredoka One", cursive;
+}
+.heading-2 {
+  text-transform: capitalize;
+  color: #f9de59;
+  /* color: white; */
+  text-align: center;
+  padding: 1.5rem 0;
+  font-family: "Fredoka One", cursive;
+  filter: drop-shadow(0 0 0.5rem black);
 }
 .chat {
   display: flex;
   flex-direction: column;
-  font-family: "Indie Flower", cursive;
-  font-family: "Redressed", cursive;
+
+  font-family: "El Messiri", sans-serif;
+}
+
+.quote a {
+  background-color: rgb(228, 227, 227);
+  padding: 0.3rem;
+  /* margin-left: 1rem; */
+  color: #f98365;
+  border-radius: 0.5rem;
+  display: block;
+  border-left: 0.5rem solid #f9de59;
+  text-decoration: none;
 }
 .art-cover-1 {
   width: 100%;
 }
 .card p {
   font-family: "Indie Flower", cursive;
-}
-
-.self {
-  align-self: flex-end;
-  justify-self: center;
-  background-color: #e8a628;
-  color: whitesmoke;
-  border-radius: 50%;
-  padding: 0.2rem;
-}
-
-.the_voice {
-  align-self: flex-start;
-  justify-self: left;
-  background-color: #f98365;
-  color: whitesmoke;
-  border-radius: 50%;
-  padding: 0.2rem;
 }
 
 .chat_bubble {
@@ -191,4 +219,11 @@ p {
   text-align: center;
   font-family: "Fredoka One", cursive;
   font-size: 10px;
+}
+
+/* media queries */
+@media screen and (min-width: 720px) {
+  .art_container {
+    width: 60%;
+  }
 }
