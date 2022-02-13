@@ -23,6 +23,7 @@ body {
   font-family: "Redressed", cursive;
 
   background-attachment: fixed;
+  background-position: center;
   scroll-behavior: smooth;
   /* background-repeat: no-repeat; */
 }
@@ -153,6 +154,7 @@ p {
 .heading {
   padding: 1rem 0 1rem 0;
   font-family: "Fredoka One", cursive;
+  text-transform: capitalize;
 }
 .heading-2 {
   text-transform: capitalize;
@@ -162,6 +164,7 @@ p {
   padding: 1.5rem 0;
   font-family: "Fredoka One", cursive;
   filter: drop-shadow(0 0 0.5rem black);
+  letter-spacing: 1px;
 }
 .chat {
   display: flex;
@@ -222,7 +225,16 @@ p {
 .short_note p {
   margin-bottom: 0.5rem;
   text-align: justify;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+}
+
+.val_pic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.val_pic img {
+  width: 100%;
 }
 
 /* FOOTER */
